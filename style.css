@@ -250,3 +250,9 @@ input[type="color"] {
   background: #443c68;
   transition: background 0.5s ease-in;
 }
+@media only screen and (max-width: 600px) {
+  .layout {
+    width: 100%;
+    height: 100%;
+  }
+}

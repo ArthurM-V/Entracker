@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Entracker</title>
+  </head>
+  <body>
+    <body>
+      <div class="layout">
+        <nav>
+          <div class="hero">
+            <h1><a href="index.html">ENTRACKER</a></h1>
+          </div>
+        </nav>
+        <div class="sidebar">
+          <div class="cont">
+            <div class="ct ct--1">
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="56px"
+                  viewBox="0 -960 960 960"
+                  width="56px"
+                  fill="#feb106"
+                  id="calc"
+                >
+                  <path
+                    d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="ct ct--2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="56px"
+                viewBox="0 -960 960 960"
+                width="56px"
+                fill="#e8eaed"
+                id="cln"
+              >
+                <path
+                  d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <main>
+          <div class="calc-layout">
+            <div class="calc-info">
+              <h2>Como funciona?</h2>
+              <p>
+                Com a nossa calculadora de consumo energético, você pode simular
+                o quanto seus eletrodomésticos consomem da sua energia elétrica
+                em kWh.
+              </p>
+              <h3>
+                Aqui estão os gastos médios de alguns aparelhos residenciais:
+              </h3>
+              <p class="lista">
+                Aspirador de pó: 600W <br />
+                Batedeira de bolo: 100W <br />
+                Cafeteira elétrica pequena: 600W <br />
+                Ferro elétrico simples de passar roupa: 500W <br />
+                Fogão comum com acendedor: 90W <br />
+                Fogão elétrico de 4 bocas potência por cada queimador: 1500W
+                <br />
+                Forno de microondas: 750W <br />
+                Geladeira Comum: 250W <br />
+                Impressora comum: 90W <br />
+                Liquidificador doméstico: 200W
+              </p>
+              <p>
+                Esses são apenas alguns exemplos, para acessar a lista completa,
+                clique
+                <a
+                  href="https://www.cemig.com.br/wp-content/uploads/2020/10/POTENCIA-MEDIA-DE-APARELHOS-RESIDENCIAIS-E-COMERCIAIS.pdf"
+                  target="_blank"
+                  >aqui</a
+                >.
+              </p>
+            </div>
+            <div class="calc-comp">
+              <div class="calc-up">
+                <h2>Insira as informações do seu eletrodoméstico!</h2>
+                <div class="calc-input">
+                  <label for="type">Informe qual o aparelho</label>
+                  <input
+                    type="text"
+                    name="type"
+                    placeholder="Ex: Geladeira"
+                    id="aparelho"
+                  />
+                  <label for="potencia">Potência do aparelho(Watts)</label>
+                  <input
+                    type="number"
+                    name="potencia"
+                    placeholder="Ex: 60"
+                    min="0"
+                    id="potencia"
+                  />
+                  <label for="horasdia">Horas de uso por dia</label>
+                  <input
+                    type="number"
+                    name="horasdia"
+                    placeholder="Ex: 5"
+                    min="0"
+                    id="horasDia"
+                  />
+                  <label for="tarifa"
+                    >Informe a tarifa energética presente na conta de luz</label
+                  >
+                  <input
+                    type="number"
+                    name="tarifa"
+                    placeholder="Ex:0,6795"
+                    id="tarifa"
+                  />
+                  <button id="calcula">Calcular</button>
+                </div>
+              </div>
+              <div class="calc-res">
+                <table class="table hidden">
+                  <tr>
+                    <th>Aparelho</th>
+                    <th>Potência</th>
+                    <th>Horas por dia</th>
+                    <th>Consumo (em kWh)</th>
+                    <th>Custo aproximado</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <script src="script.js"></script>
+    </body>
+  </body>
+</html>

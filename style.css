@@ -320,6 +320,7 @@ input:focus-visible {
     flex-direction: column-reverse;
     gap: 0.25rem;
     border-radius: 0;
+    padding: 0.25rem;
   }
   .calc-info {
     width: 100%;
@@ -341,5 +342,8 @@ input:focus-visible {
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
+  }
+  .calc-res {
+    padding: 0.1rem;
   }
 }

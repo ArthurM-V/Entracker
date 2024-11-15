@@ -23,7 +23,6 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: #454545;
-  border-radius: 15px;
 }
 ::-webkit-scrollbar-track {
   background: none;
@@ -247,11 +246,13 @@ input:focus-visible {
   color: #fff;
   font-size: 15px;
   border-collapse: collapse;
-  padding: 2rem;
+  padding: 1.2rem;
 }
 .calc-res th {
   height: 100%;
   border-right: 0.2rem solid #feb106;
+  font-size: 15px;
+  padding: 0.45rem;
 }
 .td {
   height: 100%;
@@ -301,7 +302,6 @@ input:focus-visible {
     align-items: center;
     justify-content: center;
   }
-
   main {
     grid-column: 1;
     grid-row: 3;
@@ -320,7 +320,7 @@ input:focus-visible {
     flex-direction: column-reverse;
     gap: 0.25rem;
     border-radius: 0;
-    padding: 0.25rem;
+    padding: 0.45rem;
   }
   .calc-info {
     width: 100%;

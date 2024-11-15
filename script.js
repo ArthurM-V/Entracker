@@ -1,57 +1,84 @@
 const tipoAparelho = document.querySelector("#aparelho");
 const potencia = document.querySelector("#potencia");
 const horasDia = document.querySelector("#horasDia");
+const horasMes = document.querySelector("#horasMes");
 const tarifa = document.querySelector("#tarifa");
 const calcula = document.querySelector("#calcula");
 const tableInfo = document.querySelector(".table");
-let data = [];
 
 function calcCost() {
   let result = 0;
   let potenciaWatts = 0;
-  result = ((potencia.value * horasDia.value) / 1000) * tarifa.value;
-  potenciaWatts = (potencia.value * horasDia.value) / 1000;
 
-  if ((potencia.value == "") & (horasDia.value == "") & (tarifa.value == "")) {
+  const calcHoras = ajustaTempo(horasDia.value);
+
+  potenciaWatts = (potencia.value * calcHoras * horasMes.value) / 1000;
+  result = potenciaWatts * tarifa.value;
+
+  if (
+    (potencia.value == "") &
+    (horasDia.value == "") &
+    (horasMes.value == "") &
+    (tarifa.value == "")
+  ) {
     alert("Preencha todos as informações!");
 
-    potencia.value = "";
-    potencia.textContent = "";
-
-    horasDia.value = "";
-    horasDia.textContent = "";
-
-    tarifa.value = "";
-    horasDia.textContent = "";
+    clearInfo();
   } else {
-    data.push(tipoAparelho.value);
-    data.push(potencia.value);
-    data.push(horasDia.value);
-    data.push(potenciaWatts);
-    data.push(result);
+    const row = document.createElement("tr");
 
-    for (let i = 0; i < 1; i++) {
-      const row = document.createElement("tr");
-      for (let j = 0; j < data.length; j++) {
-        const cell = document.createElement("td");
-        cell.textContent = data[j];
-        cell.classList.add("td");
+    const data = [
+      tipoAparelho.value,
+      potencia.value,
+      horasDia.value,
+      potenciaWatts.toString().replace(".", ",") + " kWh",
+      result.toFixed(2).toString().replace(".", ",") + "R$",
+    ];
 
-        row.appendChild(cell);
-      }
-      tableInfo.appendChild(row);
-    }
-    tableInfo.classList.remove("hidden");
+    data.forEach((value) => {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+      cell.classList.add("td");
+      row.appendChild(cell);
+    });
 
-    potencia.value = "";
-    potencia.textContent = "";
+    tableInfo.appendChild(row);
 
-    horasDia.value = "";
-    horasDia.textContent = "";
-
-    tarifa.value = "";
-    horasDia.textContent = "";
+    document.querySelector(".calc-res").classList.remove("hidden");
+    clearInfo();
   }
+}
+
+function clearInfo() {
+  tipoAparelho.value = "";
+  tipoAparelho.textContent = "";
+
+  potencia.value = "";
+  potencia.textContent = "";
+
+  horasDia.value = "";
+  horasDia.textContent = "";
+
+  horasMes.value = "";
+  horasMes.textContent = "";
+
+  tarifa.value = "";
+  horasDia.textContent = "";
+
+  potenciaWatts = 0;
+
+  result = 0;
+}
+
+function ajustaTempo(tempo) {
+  return tempo
+    .split(":")
+    .map(function (val) {
+      return parseInt(val, 10);
+    })
+    .reduce(function (previousValue, currentValue, index, array) {
+      return previousValue + currentValue / Math.pow(60, index);
+    });
 }
 
 calcula.addEventListener("click", calcCost);

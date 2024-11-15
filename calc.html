@@ -103,13 +103,24 @@
                     id="potencia"
                   />
                   <label for="horasdia">Horas de uso por dia</label>
+
                   <input
-                    type="number"
+                    type="text"
                     name="horasdia"
-                    placeholder="Ex: 5"
                     min="0"
                     id="horasDia"
+                    placeholder="Ex: 05:00"
                   />
+                  <label for="horasmes">Dias usados</label>
+
+                  <input
+                    type="text"
+                    name="horasmes"
+                    min="0"
+                    id="horasMes"
+                    placeholder="Ex: 5"
+                  />
+
                   <label for="tarifa"
                     >Informe a tarifa energética presente na conta de luz</label
                   >
@@ -122,13 +133,13 @@
                   <button id="calcula">Calcular</button>
                 </div>
               </div>
-              <div class="calc-res">
-                <table class="table hidden">
+              <div class="calc-res hidden">
+                <table class="table">
                   <tr>
                     <th>Aparelho</th>
                     <th>Potência</th>
                     <th>Horas por dia</th>
-                    <th>Consumo (em kWh)</th>
+                    <th>Consumo por mês</th>
                     <th>Custo aproximado</th>
                   </tr>
                 </table>

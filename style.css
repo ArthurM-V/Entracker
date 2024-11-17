@@ -625,6 +625,7 @@ input:focus-visible {
     display: flex;
     gap: 2rem;
     padding: 2rem;
+    border-right: none;
   }
   .goal-create input[type="text"] {
     min-width: 35vw;

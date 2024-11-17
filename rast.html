@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="track">
+      <div class="track-layout">
+        <div class="track-nav">
+          <h1>ENTRACKER</h1>
+          <div class="nav-tools">
+            <div class="nt nt--1">
+              <a href="index.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="42px"
+                  viewBox="0 -960 960 960"
+                  width="42px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="nt nt--2">
+              <a href="calc.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="42px"
+                  viewBox="0 -960 960 960"
+                  width="42px"
+                  fill="#e8eaed"
+                  id="calc"
+                >
+                  <path
+                    d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="nt nt--3">
+              <a href="rast.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="42px"
+                  viewBox="0 -960 960 960"
+                  width="42px"
+                  fill="#e8eaed"
+                  id="cln"
+                >
+                  <path
+                    d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="track-main">
+          <div class="goal-create">
+            <h1>Crie sua meta!</h1>
+            <input
+              type="text"
+              name="goal-name"
+              id="goal-name"
+              placeholder="Nomeie sua meta!"
+              maxlength="20"
+            />
+            <label for="goal-color"><h2>Customize sua meta!</h2></label>
+            <div class="goal-color"><input type="color" id="goal-color" /></div>
+            <button id="add-goal">+</button>
+          </div>
+          <div class="goal-display">
+            <div class="display-screen"></div>
+          </div>
+        </div>
+      </div>
+      <div class="track-overlay"></div>
+      <div class="track-window">
+        <div class="window-top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 -960 960 960"
+            width="48px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M453-280h60v-240h-60v240Zm26.98-314q14.02 0 23.52-9.2T513-626q0-14.45-9.48-24.22-9.48-9.78-23.5-9.78t-23.52 9.78Q447-640.45 447-626q0 13.6 9.48 22.8 9.48 9.2 23.5 9.2Zm.29 514q-82.74 0-155.5-31.5Q252-143 197.5-197.5t-86-127.34Q80-397.68 80-480.5t31.5-155.66Q143-709 197.5-763t127.34-85.5Q397.68-880 480.5-880t155.66 31.5Q709-817 763-763t85.5 127Q880-563 880-480.27q0 82.74-31.5 155.5Q817-252 763-197.68q-54 54.31-127 86Q563-80 480.27-80Zm.23-60Q622-140 721-239.5t99-241Q820-622 721.19-721T480-820q-141 0-240.5 98.81T140-480q0 141 99.5 240.5t241 99.5Zm-.5-340Z"
+            />
+          </svg>
+          <h1>Bem-vindo ao Rastreador de Hábitos!</h1>
+        </div>
+        <div class="window-text">
+          <h2>Como funciona?</h2>
+          <p>
+            Nosso rastreador de hábitos é a ferramenta ideal para quem busca
+            personalizar sua rotina e reduzir o consumo de energia. Acompanhe
+            seus hábitos, estabeleça metas e celebre suas conquistas! <br />
+            <br />
+            O rastreador funciona de forma simples e intuitiva. Você começa
+            nomeando sua meta, escolhe uma cor para personalizá-la e pode
+            adicionar até 7 metas simultaneamente. As metas ficam registradas
+            por uma semana e, ao completar uma, basta clicar no botão no canto
+            superior direito para marcá-la como concluída. Caso queira, você
+            pode excluir qualquer meta a qualquer momento, clicando no botão
+            localizado no canto inferior direito. <br />
+            Assim, o rastreador facilita o acompanhamento do seu progresso e a
+            organização das suas metas. Com um design simples e recursos
+            práticos, você pode focar no que realmente importa: alcançar seus
+            objetivos de forma eficiente e no seu ritmo. <br />
+            <br />
+            Experimente agora e mantenha sua jornada sempre organizada e
+            motivada!
+          </p>
+        </div>
+        <div class="window-button">
+          <button class="start-button">Comecar agora!</button>
+        </div>
+      </div>
+    </div>
+    <script src="tracker.js"></script>
+  </body>
+</html>

@@ -16,10 +16,10 @@ function calcCost() {
   result = potenciaWatts * tarifa.value;
 
   if (
-    (potencia.value == "") &
-    (horasDia.value == "") &
-    (horasMes.value == "") &
-    (tarifa.value == "")
+    potencia.value == "" &&
+    horasDia.value == "" &&
+    horasMes.value == "" &&
+    tarifa.value == ""
   ) {
     alert("Preencha todos as informações!");
 
@@ -31,7 +31,7 @@ function calcCost() {
       tipoAparelho.value,
       potencia.value,
       horasDia.value,
-      potenciaWatts.toString().replace(".", ",") + " kWh",
+      potenciaWatts.toFixed(3).toString().replace(".", ",") + " kWh",
       result.toFixed(2).toString().replace(".", ",") + "R$",
     ];
 
@@ -82,8 +82,3 @@ function ajustaTempo(tempo) {
 }
 
 calcula.addEventListener("click", calcCost);
-window.addEventListener("keydown", (e) => {
-  if (e.key == "Escape") {
-    tableInfo.classList.toggle("hidden");
-  }
-});

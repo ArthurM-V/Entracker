@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   z-index: 1;
+  position: relative;
 }
 ::-webkit-scrollbar {
   z-index: 5;
@@ -25,7 +26,7 @@ body {
   background: #454545;
 }
 ::-webkit-scrollbar-track {
-  background: none;
+  background: #feb106;
 }
 .margarine-regular {
   font-family: "Margarine", sans-serif;
@@ -262,12 +263,263 @@ input:focus-visible {
 .calc-res th:last-child {
   border: none;
 }
+/* ========== TRACKER ========== */
+.track {
+  max-width: 100%;
+  min-height: 100vh;
+  background: #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.track-layout {
+  width: 95vw;
+  min-height: 80vh;
+  background: #232323;
+  border-radius: 15px;
+  box-shadow: 4px 8px 16px 8px rgba(0, 0, 0, 0.4);
+}
+.track-nav {
+  width: 100%;
+  min-height: 10vh;
+  border-bottom: 0.25rem solid #feb106;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.track-nav h1 {
+  color: #e8eaed;
+  font-size: 35px;
+  padding: 1.25rem;
+}
+.nav-tools {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.45rem;
+}
+.nt {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+.nt:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background 0.35s;
+}
+.track-main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.goal-create {
+  width: 40vw;
+  height: 85vh;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5rem;
+  border-right: 0.25rem solid #feb106;
+}
+.goal-create h1 {
+  font-size: 6.5rem;
+  color: #fff;
+}
+.goal-create input[type="text"] {
+  width: 20vw;
+  height: 2.5rem;
+  padding: 1.25rem;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  background: none;
+  border: none;
+  border-bottom: 0.15rem solid #feb106;
+  outline: none;
+  text-align: center;
+}
+.goal-create button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  background: #feb106;
+  cursor: pointer;
+  color: #fff;
+  font-size: 35px;
+  font-family: "Margarine", sans-serif;
+}
+.goal-create button:hover {
+  background: #eca305;
+  transition: background 0.3s;
+}
+.goal-create h2 {
+  font-size: 25px;
+  color: #e8eade;
+}
+.goal-color {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.goal-color input {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+}
+.goal-display {
+  width: 55vw;
+  min-height: 100%;
+  padding: 3rem;
+  background: none;
+}
+.display-screen {
+  width: 100%;
+  height: 75vh;
+  background: #121212;
+  border-radius: 12px;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow: auto;
+}
+.goal-view {
+  width: 100%;
+  height: 15vh;
+  padding: 0.75rem;
+  border-left: 0.35rem solid #e67ab8;
+  display: flex;
+  justify-content: space-between;
+  background: #343434;
+  border-radius: 8px;
+}
+.goal-view h2 {
+  color: #e8eade;
+  font-weight: bold;
+  font-size: 22px;
+}
+.goal-tools {
+  width: 1.25rem;
+  height: 100%;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.goal-done {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: none;
+  background: #e8eade;
+  border: 0.25rem solid #000;
+  cursor: pointer;
+}
+.goal-delete {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.goal-done:hover {
+  box-shadow: inset 0 1px 4px 2px #feb106;
+}
+.goal-delete:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* ========== OVERLAY AND MODAL WINDOW ========== */
+
+.track-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+.track-window {
+  position: absolute;
+  z-index: 10;
+  width: 85vw;
+  height: 90vh;
+  background: #252525;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.window-top {
+  width: 100%;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+}
+.window-top h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  color: #feb106;
+}
+.window-text {
+  width: 100%;
+  min-height: 40vh;
+}
+.window-text h2 {
+  font-size: 3.5rem;
+}
+.window-text p {
+  font-size: 2rem;
+}
+.window-button {
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.start-button {
+  width: 15rem;
+  height: 5rem;
+  border-radius: 32px;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: #feb106;
+  cursor: pointer;
+}
+.start-button:hover {
+  background: #e69e04;
+}
 /* ========== HIDDEN ========== */
 .hidden {
   display: none;
 }
 /* ========== DESIGN RESPONSIVO ========== */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .layout {
     min-height: 100vh;
     display: flex;
@@ -345,5 +597,45 @@ input:focus-visible {
   }
   .calc-res {
     padding: 0.1rem;
+  }
+  .track {
+    width: 100%;
+    height: 100%;
+  }
+  .track-layout {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    border-radius: 0;
+  }
+  .track-nav {
+    width: 100%;
+    background: #343434;
+  }
+  .track-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .goal-create {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .goal-create input[type="text"] {
+    width: 35vw;
+  }
+  .goal-display {
+    width: 100%;
+    border: none;
+  }
+  .track-window {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 }

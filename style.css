@@ -627,7 +627,8 @@ input:focus-visible {
     padding: 2rem;
   }
   .goal-create input[type="text"] {
-    width: 35vw;
+    min-width: 35vw;
+    max-width: 65vw;
   }
   .goal-display {
     width: 100%;
